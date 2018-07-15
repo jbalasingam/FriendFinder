@@ -71,7 +71,7 @@
        </div>
 
        <h3><strong>Question 4</strong></h3>
-      <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+      <h4>You rarely do something just out of sheer curiosity.</h4>
       <div class="form-group underlying col-sm-4 q4">   
           <button class="btn btn-primary dropdown-toggle btn-q4" type="button" style="margin-top:42px;" id="q4" data-toggle="dropdown">
                        <span class="Q4">Choose Response</span>
@@ -86,7 +86,7 @@
        </div>
 
       <h3><strong>Question 5</strong></h3>
-      <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+      <h4>People can rarely upset you.</h4>
       <div class="form-group underlying col-sm-5 q5">   
           <button class="btn btn-primary dropdown-toggle btn-q5" type="button" style="margin-top:52px;" id="q5" data-toggle="dropdown">
                        <span class="Q5">Choose Response</span>
@@ -101,7 +101,7 @@
        </div>
 
        <h3><strong>Question 6</strong></h3>
-       <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+       <h4>It is often difficult for you to relate to other people’s feelings.</h4>
        <div class="form-group underlying col-sm-6 q6">   
            <button class="btn btn-primary dropdown-toggle btn-q6" type="button" style="margin-top:62px;" id="q6" data-toggle="dropdown">
                         <span class="Q6">Choose Response</span>
@@ -116,7 +116,7 @@
         </div>
 
       <h3><strong>Question 7</strong></h3>
-      <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+      <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
       <div class="form-group underlying col-sm-7 q7">   
           <button class="btn btn-primary dropdown-toggle btn-q7" type="button" style="margin-top:72px;" id="q7" data-toggle="dropdown">
                        <span class="Q7">Choose Response</span>
@@ -131,7 +131,7 @@
        </div>
 
       <h3><strong>Question 8</strong></h3>
-      <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+      <h4>You rarely get carried away by fantasies and ideas.</h4>
       <div class="form-group underlying col-sm-8 q8">   
           <button class="btn btn-primary dropdown-toggle btn-q8" type="button" style="margin-top:82px;" id="q8" data-toggle="dropdown">
                        <span class="Q8">Choose Response</span>
@@ -146,7 +146,7 @@
        </div>
 
       <h3><strong>Question 9</strong></h3>
-      <h9>You find it easy to stay relaxed and focused even when there is some pressure.</h9>
+      <h9>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h9>
       <div class="form-group underlying col-sm-9 q9">   
           <button class="btn btn-primary dropdown-toggle btn-q9" type="button" style="margin-top:92px;" id="q9" data-toggle="dropdown">
                        <span class="Q9">Choose Response</span>
@@ -161,7 +161,7 @@
        </div>
 
       <h3><strong>Question 10</strong></h3>
-      <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+      <h4>You feel more energetic after spending time with a group of people.</h4>
       <div class="form-group underlying col-sm-10 q10">   
           <button class="btn btn-primary dropdown-toggle btn-q10" type="button" style="margin-top:102px;" id="q10" data-toggle="dropdown">
                        <span class="Q10">Choose Response</span>
@@ -182,47 +182,66 @@
       <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
        Submit</button>
 
+  
+
        <script>
           //this changes the name within the drop-down button
           $(".dropdown-menu li a").click(function(){
-
             text = $(this).attr('class')
-            console.log(text)
-            value = $(this).attr('value')
-            console.log(value);
             switch(text){
               case"q1":
                 $(".btn-q1:first-child").html(' <span class="Q1">'+$(this).text()+'</span>');
+                q1 = parseInt($(this).attr('value'));
                 break;
               case "q2":
                 $(".btn-q2:first-child").html(' <span class="Q2">'+$(this).text()+'</span>');
+                q2 = parseInt($(this).attr('value'));
                 break;
               case "q3":
                 $(".btn-q3:first-child").html(' <span class="Q3">'+$(this).text()+'</span>');
+                q3 = parseInt($(this).attr('value'));
                 break;
               case "q4":
                 $(".btn-q4:first-child").html(' <span class="Q4">'+$(this).text()+'</span>');
+                q4 = parseInt($(this).attr('value'));
                 break;
               case "q5":
                 $(".btn-q5:first-child").html(' <span class="Q5">'+$(this).text()+'</span>');
+                q5 = parseInt($(this).attr('value'));
                 break;
               case "q6":
                 $(".btn-q6:first-child").html(' <span class="Q6">'+$(this).text()+'</span>');
+                q6 = parseInt($(this).attr('value'));
                 break;
               case "q7":
                 $(".btn-q7:first-child").html(' <span class="Q7">'+$(this).text()+'</span>');
+                q7 = parseInt($(this).attr('value'));
                 break;
               case "q8":
                 $(".btn-q8:first-child").html(' <span class="Q8">'+$(this).text()+'</span>');
+                q8 = parseInt($(this).attr('value'));
                 break;
               case "q9":
                 $(".btn-q9:first-child").html(' <span class="Q9">'+$(this).text()+'</span>');
+                q9 = parseInt($(this).attr('value'));
                 break;
               case "q10":
                 $(".btn-q10:first-child").html(' <span class="Q10">'+$(this).text()+'</span>');
+                q10 = parseInt($(this).attr('value'));
                 break;
             }
 
+          });
+
+
+          $("#submit").click(function(){
+         // Create an object for the user"s data
+            var userData = {
+              name: $("#name").val(),
+              photo: $("#photo").val(),
+              scores: [q1,q2,q3,q4,q5,q6,q7,q8,q9,q10]
+            };
+            console.log(userData);
           });
        </script>
   
