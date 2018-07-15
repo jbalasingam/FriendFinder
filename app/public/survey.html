@@ -1,20 +1,12 @@
 <!doctype html>
 
 <head>
-<html lang="en"><head>
+<html lang="en">
+  <head>
     <meta charset="UTF-8">
     <title>FriendFinder</title>
-  
-    <!-- Latest compiled and minified CSS & JS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery.js"></script>  
-    <!-- Font Awesome Glyphicons -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-  
-    <!-- Chosen -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
-  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   
   <body>
@@ -32,159 +24,96 @@
       <input type="text" id="photo" class="form-control" required="">
   
       <hr>
-  
+
       <h3><strong>Question 1</strong></h3>
       <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
-      <select class="chosen-select" id="q1" style="display: none;">
-        <option value=""></option>
-        <option value="1">1 (Strongly Disagree)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Strongly Agree)</option>
-      </select><div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q1_chosen"><a class="chosen-single chosen-default"><span>Select an Option</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
-  
-      <h3><strong>Question 2</strong></h3>
+      <div class="form-group underlying col-sm-3 q1">   
+          <button class="btn btn-primary dropdown-toggle q1" type="button" style="margin-top:32px;" id="dropdownMenuButton q1" data-toggle="dropdown">
+                       <span class="Question1">Choose Response</span>
+               </button> 
+                   <div class="dropdown-menu">
+                      <li><a class="q1" value="1" href="#">1</a></li>
+                      <li><a class="q1" value="2" href="#">2</a></li>
+                      <li><a class="q1" value="3" href="#">3</a></li>
+                      <li><a class="q1" value="4" href="#">4</a></li>
+                      <li><a class="q1" value="5" href="#">5</a></li>
+                   </div>
+       </div>
+
+       <h3><strong>Question 2</strong></h3>
       <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
-      <select class="chosen-select" id="q2" style="display: none;">
-        <option value=""></option>
-        <option value="1">1 (Strongly Disagree)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Strongly Agree)</option>
-      </select><div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q2_chosen"><a class="chosen-single chosen-default"><span>Select an Option</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
-  
-  
-      <h3><strong>Question 3</strong></h3>
+      <div class="form-group underlying col-sm-3 q2">   
+          <button class="btn btn-primary dropdown-toggle q2" type="button" style="margin-top:32px;" id="dropdownMenuButton q2" data-toggle="dropdown">
+                       <span class="Question2">Choose Response</span>
+               </button> 
+                  <div class="dropdown-menu">
+                      <li><a class="q2" value="1" href="#">1</a></li>
+                      <li><a class="q2" value="2" href="#">2</a></li>
+                      <li><a class="q2" value="3" href="#">3</a></li>
+                      <li><a class="q2" value="4" href="#">4</a></li>
+                      <li><a class="q2" value="5" href="#">5</a></li>
+                  </div>
+       </div>
+
+       <h3><strong>Question 3</strong></h3>
       <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
-      <select class="chosen-select" id="q3" style="display: none;">
-        <option value=""></option>
-        <option value="1">1 (Strongly Disagree)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Strongly Agree)</option>
-      </select><div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q3_chosen"><a class="chosen-single chosen-default"><span>Select an Option</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
-  
-  
-      <h3><strong>Question 4</strong></h3>
-      <h4>You rarely do something just out of sheer curiosity.</h4>
-      <select class="chosen-select" id="q4" style="display: none;">
-        <option value=""></option>
-        <option value="1">1 (Strongly Disagree)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Strongly Agree)</option>
-      </select><div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q4_chosen"><a class="chosen-single chosen-default"><span>Select an Option</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
-  
-  
-      <h3><strong>Question 5</strong></h3>
-      <h4>People can rarely upset you.</h4>
-      <select class="chosen-select" id="q5" style="display: none;">
-        <option value=""></option>
-        <option value="1">1 (Strongly Disagree)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Strongly Agree)</option>
-      </select><div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q5_chosen"><a class="chosen-single chosen-default"><span>Select an Option</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
-  
-  
-      <h3><strong>Question 6</strong></h3>
-      <h4>It is often difficult for you to relate to other people’s feelings.</h4>
-      <select class="chosen-select" id="q6" style="display: none;">
-        <option value=""></option>
-        <option value="1">1 (Strongly Disagree)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Strongly Agree)</option>
-      </select><div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q6_chosen"><a class="chosen-single chosen-default"><span>Select an Option</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
-  
-  
-      <h3><strong>Question 7</strong></h3>
-      <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
-      <select class="chosen-select" id="q7" style="display: none;">
-        <option value=""></option>
-        <option value="1">1 (Strongly Disagree)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Strongly Agree)</option>
-      </select><div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q7_chosen"><a class="chosen-single chosen-default"><span>Select an Option</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
-  
-      <h3><strong>Question 8</strong></h3>
-      <h4>You rarely get carried away by fantasies and ideas.</h4>
-      <select class="chosen-select" id="q8" style="display: none;">
-        <option value=""></option>
-        <option value="1">1 (Strongly Disagree)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Strongly Agree)</option>
-      </select><div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q8_chosen"><a class="chosen-single chosen-default"><span>Select an Option</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
-  
-      <h3><strong>Question 9</strong></h3>
-      <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
-      <select class="chosen-select" id="q9" style="display: none;">
-        <option value=""></option>
-        <option value="1">1 (Strongly Disagree)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Strongly Agree)</option>
-      </select><div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q9_chosen"><a class="chosen-single chosen-default"><span>Select an Option</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
-  
-      <h3><strong>Question 10</strong></h3>
-      <h4>You feel more energetic after spending time with a group of people.</h4>
-      <select class="chosen-select" id="q10" style="display: none;">
-        <option value=""></option>
-        <option value="1">1 (Strongly Disagree)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Strongly Agree)</option>
-      </select><div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q10_chosen"><a class="chosen-single chosen-default"><span>Select an Option</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
-  
-      <br>
-      <br>
-  
+      <div class="form-group underlying col-sm-3 q3">   
+          <button class="btn btn-primary dropdown-toggle btn-q3" type="button" style="margin-top:32px;" id="q3" data-toggle="dropdown">
+                       <span class="Question3">Choose Response</span>
+               </button> 
+                  <div class="dropdown-menu">
+                      <li><a class="q3" value="1" href="#">1</a></li>
+                      <li><a class="q3" value="2" href="#">2</a></li>
+                      <li><a class="q3" value="3" href="#">3</a></li>
+                      <li><a class="q3" value="4" href="#">4</a></li>
+                      <li><a class="q3" value="5" href="#">5</a></li>
+                  </div>
+       </div>
+
       <!-- Submit Button -->
       <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
        Submit</button>
-  
-      <hr>
-      <footer class="footer">
-        <div class="container">
-          <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a></p>
-        </div>
-      </footer>
+
+       <script>
+          //this changes the name within the drop-down button
+          $(".btn").click(function(){
+
+            console.log($(this).attr('id'));
+            text = $(this).attr('id');
+            console.log(this);
+
+            $(".btn-primary:first-child").html(' <span class="Question3">'+$(this).text()+'</span>');
+
+          });
+       </script>
   
     </div>
-  
-    <!-- Modal -->
-    <div id="results-modal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-  
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">×</button>
-            <h2 class="modal-title"><strong>Best Match</strong></h2>
-          </div>
-          <div class="modal-body">
-            <h2 id="match-name"></h2>
-            <img id="match-img" src="https://images.pexels.com/photos/160699/girl-dandelion-yellow-flowers-160699.jpeg?auto=compress&cs=tinysrgb&h=350" alt="">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-  
-      </div>
-    </div>
-  
- 
-  </body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+
+  </body>
+  </html>
